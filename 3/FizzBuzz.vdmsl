@@ -1,0 +1,23 @@
+module FizzBuzz
+exports all
+definitions
+types
+    fbnat = nat inv n == n mod 3 <> 0 and n mod 5 <> 0;
+state FizzBuzz of
+    count : nat
+init s == s = mk_FizzBuzz(0)
+end
+operations
+    say : () ==> fbnat | <Fizz> | <Buzz> | <FizzBuzz>
+    say() ==
+        (count := count + 1;
+        if count mod 15 = 0 then return <FizzBuzz>;
+        if count mod 5 = 0 then return <Buzz>;
+        if count mod 3 = 0 then return <Fizz>;
+        return count)
+    post
+        count = count~ + 1 and
+        (RESULT = <Fizz> => count mod 3 = 0) and
+        (RESULT = <Buzz> => count mod 5 = 0) and
+        (RESULT = <FizzBuzz> => count mod 15) = 0;
+end FizzBuzz

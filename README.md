@@ -16,3 +16,7 @@ YouTubeで公開している[極端流VDMチャンネル](https://www.youtube.co
 
 ## 第4回 番外編：ダイナブック
 [![4](http://img.youtube.com/vi/E8B5rKurxHA/0.jpg)](https://www.youtube.com/watch?v=E8B5rKurxHA)
+
+## 第5回 VDMでUIプロトタイプを動かしちゃうぞ
+[![5](http://img.youtube.com/vi/kGc6zGtf6Yw/0.jpg)](https://www.youtube.com/watch?v=kGc6zGtf6Yw)
+[![5](resources.png)](5/)

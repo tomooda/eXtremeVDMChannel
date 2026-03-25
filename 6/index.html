@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+<title>Webly Walk-Through</title>
+</head>
+<body>
+Webly Walk-Through is running.
+<p>
+count : <span id="show">0</span><br>
+<input id="clickButton" type="button" value="click" onClick="doClick(); show();">
+<input id="resetButton" type="button" value="reset" onClick="doReset(); show();">
+<script>
+async function doClick() {
+    await fetch("/Counter/click");
+}
+async function doReset() {
+    await fetch("/Counter/reset");
+}
+const showNode = document.getElementById("show");
+async function show() {
+    const response = await fetch("/Counter/show");
+    showNode.innerText = await response.json();;
+}
+</script>
+</body>
+</html>

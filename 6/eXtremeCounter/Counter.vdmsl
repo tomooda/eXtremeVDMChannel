@@ -1,0 +1,15 @@
+module Counter
+exports all
+definitions
+state Counter of
+    count : nat
+init s == s = mk_Counter(0)
+end
+operations
+    reset : () ==> ()
+    reset() == count := 0;
+    click : () ==> ()
+    click() == count := count + 1;
+    show : () ==> nat
+    show() == return count;
+end Counter
